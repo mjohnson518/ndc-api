@@ -1,6 +1,9 @@
 from django.urls import path
-from .views import NDCAPIView
+from rest_framework.routers import SimpleRouter
+from .views import UserViewSet, NDCViewSet
 
-urlpatterns = [
-    path('', NDCAPIView.as_view()),
-]
+router = SimpleRouter()
+router.register('users', UserViewSet, basename='users')
+router.register('', NDCViewSet, basename='ndcs')
+
+urlpatterns = router.urls

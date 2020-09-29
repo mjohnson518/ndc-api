@@ -1,11 +1,13 @@
 <h1>Nationally Determined Contributions</h1>
 {% for ndc in object_list %}
+<br>>-------------------------------------<
   <ul>
-    <li>Conutry: {{ ndc.country }}</li>
+    <li>Country: {{ ndc.country }}</li>
     <li>Title: {{ ndc.title }}</li>
     <li>Submission Type: {{ ndc.Submission_type }}</li>
     <li>Submission Date: {{ ndc.Submission_date }}</li>
     <li>NDC Text: {{ ndc.ndc_text }}</li>
     <li>Reference Number: {{ ndc.ref_num }}</li>
   </ul>
+  
 {% endfor %}
