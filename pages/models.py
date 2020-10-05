@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 import datetime
 
+
 NDC_TYPE = (
     ('base year emissions goal','BASE YEAR EMISSIONS GOAL'),
     ('fixed-level goal', 'FIXED-LEVEL GOAL'),

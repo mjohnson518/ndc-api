@@ -1,6 +1,9 @@
+{% extends '_base.html' %}
+
+{% block content %}
 <h1>Nationally Determined Contributions</h1>
 {% for ndc in object_list %}
-<br>>-------------------------------------<
+>-------------------------------------<  
   <ul>
     <li>Country: {{ ndc.country }}</li>
     <li>Title: {{ ndc.title }}</li>
@@ -9,5 +12,6 @@
     <li>NDC Text: {{ ndc.ndc_text }}</li>
     <li>Reference Number: {{ ndc.ref_num }}</li>
   </ul>
-  
+
 {% endfor %}
+{% endblock content %}
