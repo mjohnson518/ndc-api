@@ -7,7 +7,8 @@ class NDCSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = NDC
-        fields = ('country', 'title', 'Submission_type', 'Submission_date', 'Description', 'ref_num')
+        fields = '__all__'
+        #('country', 'title', 'Submission_type', 'Submission_date', 'Description', 'ref_num')
 
 
 class UserSerializer(serializers.ModelSerializer):

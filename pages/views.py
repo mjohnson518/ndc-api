@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from .models import NDC
 from django.urls import reverse_lazy
 from django.views import generic
@@ -22,3 +22,7 @@ class NDCListView(ListView):
 
 class AboutPageView(TemplateView):
     template_name = 'about.html'
+
+class NDCDetailView(DetailView):
+    model = NDC
+    template_name = 'pages/NDC_detail.html'

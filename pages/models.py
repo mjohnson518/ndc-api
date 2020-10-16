@@ -1,6 +1,9 @@
+import uuid
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 import datetime
+
 
 
 NDC_TYPE = (
@@ -23,11 +26,9 @@ class NDC(models.Model):
     Description = models.TextField(max_length=250, blank=False, default='NA')
     NDC_Text = models.FileField(upload_to='static/', max_length=254, default='NA')
     ref_num = models.IntegerField(blank=False, default='0')
+    slug = models.SlugField(null=False, unique=True, default=uuid.uuid1)
 
-    def __str__(self):
-        return self.title
-
-class CC_Mitigation(models.Model):
+#CC_Mitigation
     country_name = models.CharField(max_length=75, default='NA')
     country_code = models.CharField(max_length=75, default='NA')
 
@@ -88,11 +89,7 @@ class CC_Mitigation(models.Model):
     co_benefits_ccm_class = models.CharField(max_length=75, choices=class_rank, default='NA')
     co_benefits_ccm_details = models.CharField(max_length=125, default='NA')
 
-    def __str__(self):
-        return self.title
-
-
-class CC_Adaptation(models.Model):
+#CC_Adaptation
 
     migration_and_displacement_class  = models.CharField(max_length=75, choices=class_rank, default='NA')
     migration_and_displacement_details = models.CharField(max_length=125, default='NA')
@@ -160,10 +157,7 @@ class CC_Adaptation(models.Model):
     co_benefits_of_adaptation_class  = models.CharField(max_length=75, choices=class_rank, default='NA')
     co_benefits_of_adaptation_details = models.CharField(max_length=125, default='NA')
 
-    def __str__(self):
-        return self.title
-
-class Fina_and_Support(models.Model):
+#Fina_and_Support
 
     conditionality_of_adaptation_finance_class = models.CharField(max_length=75, choices=class_rank, default='NA')
     conditionality_of_adaptation_finance_details = models.CharField(max_length=125, default='NA')
@@ -186,11 +180,7 @@ class Fina_and_Support(models.Model):
     climate_risk_insurance_class = models.CharField(max_length=75, choices=class_rank, default='NA')
     climate_risk_insurance_details = models.CharField(max_length=125, default='NA')
 
-    def __str__(self):
-        return self.title
-
-
-class Planning_Process(models.Model):
+#Planning_Process
 
     planning_of_ndc_formulation_class = models.CharField(max_length=75, choices=class_rank, default='NA')
     planning_of_ndc_formulation_details = models.CharField(max_length=125, default='NA')
@@ -216,10 +206,7 @@ class Planning_Process(models.Model):
     monitoring_and_review_class = models.CharField(max_length=75, choices=class_rank, default='NA')
     monitoring_and_review_details = models.CharField(max_length=125, default='NA')
 
-    def __str__(self):
-        return self.title
-
-class Broader_Picture(models.Model):
+#Broader_Picture
 
     sustainable_development_goals_class = models.CharField(max_length=75, choices=class_rank, default='NA')
     sustainable_development_goals_details = models.CharField(max_length=125, default='NA')
@@ -259,6 +246,9 @@ class Broader_Picture(models.Model):
 
     g20_class = models.CharField(max_length=75, choices=class_rank, default='NA')
     g20_details = models.CharField(max_length=125, default='NA')
+
+    def get_absolute_url(self):
+        return reverse("NDC_detail",kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.title

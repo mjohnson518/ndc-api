@@ -1,0 +1,224 @@
+{% extends '_base.html' %}
+{% block content %}
+
+<div class="container">
+  <h3 class = 'text-primary'><b> Country: {{ ndc.country_name }}</b></h3>
+  <p><strong>Overview:</strong> The NDC for {{ ndc.country_code }} is a <strong>{{ndc.type_of_target_details}}</strong> that includes {{ndc.quantified_adaptation_targets_details}} and is estimated to cost in the range of <strong>{{ndc.costs_of_ccm_details}}</strong>.</p>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#collapseOne">
+          <h4>Mitiagation</h4> <span class="badge badge-primary badge-pill align-items-end">38</span>
+        </a>
+
+      </div>
+      <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">Type of Mitigation Target: {{ndc.type_of_target_class}} </li>
+            <li class="list-group-item list-group-item-action">Mitigation Target Details: {{ndc.type_of_target_details}} </li>
+            <li class="list-group-item list-group-item-action">Type of Temperature Target: {{ndc.temp_target_class}} </li>
+            <li class="list-group-item list-group-item-action">Temperature Target Details: {{ndc.temp_target_details}}</li>
+            <li class="list-group-item list-group-item-action">Type of Mitigation Costs: {{ndc.costs_of_ccm_class}}</li>
+            <li class="list-group-item list-group-item-action">Costs of Mitigation Details: {{ndc.costs_of_ccm_details}}</li>
+            <li class="list-group-item list-group-item-action">Type of Renewable Energy Class: {{ndc.renewable_energy_class}}</li>
+            <li class="list-group-item list-group-item-action">Renewable Energy Details: {{ndc.renewable_energy_details}}</li>
+            <li class="list-group-item list-group-item-action">Type of Energy Efficiency Class: {{ndc.energy_efficiency_class}}</li>
+            <li class="list-group-item list-group-item-action">Energy Efficiency Details: {{ndc.energy_efficiency_details}}</li>
+            <li class="list-group-item list-group-item-action">Type of Trasportation Class: {{ndc.transport_class}}</li>
+            <li class="list-group-item list-group-item-action">Transportation Details: {{ndc.transport_details}}</li>
+            <li class="list-group-item list-group-item-action">Carbon Capture and Storage Class: {{ndc.carbon_capture_and_storage_class}}</li>
+            <li class="list-group-item list-group-item-action">Carbon Capture and Storage Details: {{ndc.carbon_capture_and_storage_details}}</li>
+            <li class="list-group-item list-group-item-action">Agriculture Class: {{ndc.agriculture_class}}</li>
+            <li class="list-group-item list-group-item-action">Agriculture Details: {{ndc.agriculture_details}}</li>
+            <li class="list-group-item list-group-item-action">Land Use and Forestry Class: {{ndc.land_use_and_forestry_class}}</li>
+            <li class="list-group-item list-group-item-action">Land Use and Forestry Details: {{ndc.land_use_and_forestry_details}}</li>
+            <li class="list-group-item list-group-item-action">Waste Class: {{ndc.waste_class}}</li>
+            <li class="list-group-item list-group-item-action">Waste Details: {{ndc.waste_details}}</li>
+            <li class="list-group-item list-group-item-action">Reducing Non-CO2 Gases Class: {{ndc.reducing_non_co2_gases_class}}</li>
+            <li class="list-group-item list-group-item-action">Reducing Non-CO2 Gases Details: {{ndc.reducing_non_co2_gases_details}}</li>
+            <li class="list-group-item list-group-item-action">Fossil Fuel Production Class: {{ndc.fossil_fuel_production_class}}</li>
+            <li class="list-group-item list-group-item-action">Fossil Fuel Production Details: {{ndc.fossil_fuel_production_details}}</li>
+            <li class="list-group-item list-group-item-action">Fossil Fuel Subsidies Class: {{ndc.fossil_fuel_subsidiaries_class}}</li>
+            <li class="list-group-item list-group-item-action">Fossil Fuel Subsidies Details: {{ndc.fossil_fuel_subsidiaries_details}}</li>
+            <li class="list-group-item list-group-item-action">Land Use Change Class: {{ndc.land_use_change_class}}</li>
+            <li class="list-group-item list-group-item-action">LAnd Use Change Details: {{ndc.land_use_change_details}}</li>
+            <li class="list-group-item list-group-item-action">REDD+ Class: {{ndc.redd_class}}</li>
+            <li class="list-group-item list-group-item-action">REDD+ Details: {{ndc.redd_details}}</li>
+            <li class="list-group-item list-group-item-action">Trade Class: {{ndc.trade_class}}</li>
+            <li class="list-group-item list-group-item-action">Trade Details: {{ndc.trade_details}}</li>
+            <li class="list-group-item list-group-item-action">Market Mechanism Class: {{ndc.market_mechanisms_class}}</li>
+            <li class="list-group-item list-group-item-action"> Market Mechanism Details: {{ndc.market_mechanisms_details}}</li>
+            <li class="list-group-item list-group-item-action">Mitigation Documents Class: {{ndc.mitigation_documents_class}}</li>
+            <li class="list-group-item list-group-item-action">Mitigation Documents Details: {{ndc.mitigation_documents_details}}</li>
+            <li class="list-group-item list-group-item-action">Co-Benefits of Mitigation Class: {{ndc.co_benefits_ccm_class}}</li>
+            <li class="list-group-item list-group-item-action">Co-Benefits of Mitigation Details: {{ndc.co_benefits_ccm_details}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#collapseTwo">
+          <h4>Adaptation</h4> <span class="badge badge-primary badge-pill align-items-end">44</span>
+        </a>
+      </div>
+
+
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">Migration and Displacement Class: {{ndc.migration_and_displacement_class}} </li>
+            <li class="list-group-item list-group-item-action">Migration and Displacement Details: {{ndc.migration_and_displacement_details}} </li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Agriculture Resources Class: {{ndc.vulnerability_agriculture_class}} </li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Agriculture Resources Details: {{ndc.vulnerability_agriculture_details}}</li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Water Resources Class: {{ndc.vulnerability_water_class}}</li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Water Resources Details: {{ndc.vulnerability_water_details}}</li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Ecosystems Class: {{ndc.vulnerability_ecosystems_class}}</li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Ecosystems Details: {{ndc.vulnerability_ecosystems_details}}</li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Citizens Health Class: {{ndc.vulnerability_health_class}} </li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Citizens Health Details: {{ndc.vulnerability_health_details}} </li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Coastal Zones Class: {{ndc.vulnerability_coastal_zones_class}} </li>
+            <li class="list-group-item list-group-item-action">Vulnerability of Coastal Zones Details: {{ndc.vulnerability_coastal_zones_details}} </li>
+            <li class="list-group-item list-group-item-action">Costs of Recent Climate Related Hazards Class: {{ndc.costs_of_recent_climate_related_hazards_class}}</li>
+            <li class="list-group-item list-group-item-action">Costs of Recent Climate Related Hazards Details: {{ndc.costs_of_recent_climate_related_hazards_details}}</li>
+            <li class="list-group-item list-group-item-action">Costs of Future Climate Related Hazards Class: {{ndc.costs_of_future_climate_related_hazards_class}}</li>
+            <li class="list-group-item list-group-item-action">Costs of Future Climate Related Hazards Details: {{ndc.costs_of_future_climate_related_hazards_details}}</li>
+            <li class="list-group-item list-group-item-action">Climate Risks of Extreme Weather Class: {{ndc.climate_risks_extreme_weather_class}}</li>
+            <li class="list-group-item list-group-item-action">Climate Risks of Extreme Weather Details: {{ndc.climate_risks_extreme_weather_details}}</li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Floods Class: {{ndc.climate_risks_floods_class}} </li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Floods Details: {{ndc.climate_risks_floods_details}} </li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Droughts Class: {{ndc.climate_risks_droughts_class}} </li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Droughts Details: {{ndc.climate_risks_droughts_details}} </li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Temperature Increases Class: {{ndc.climate_risks_temp_increase_class}} </li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Temperature Increases Details: {{ndc.climate_risks_temp_increase_details}} </li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Sea Level Rise Class: {{ndc.climate_risks_sea_level_rise_class}} </li>
+            <li class="list-group-item list-group-item-action">Climate Risk of Sea Level Rise Details: {{ndc.climate_risks_sea_level_rise_details}} </li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Water Class: {{ndc.priority_sectors_water_class}} </li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Water Details: {{ndc.priority_sectors_water_details}}</li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Agriculture Class: {{ndc.priority_sectors_agriculture_class}} </li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Agriculture Details: {{ndc.priority_sectors_agriculture_details}}</li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Health Class: {{ndc.priority_sectors_health_class}} </li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Health Details: {{ndc.priority_sectors_health_class_details}}</li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Ecosystems Class: {{ndc.priority_sectors_ecosystems_class}} </li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Ecosystems Details: {{ndc.priority_sectors_ecosystems_details}}</li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Forestry Class: {{ndc.priority_sectors_forestry_class}} </li>
+            <li class="list-group-item list-group-item-action">Priority Sectors Forestry Details: {{ndc.priority_sectors_forestry_details}}</li>
+            <li class="list-group-item list-group-item-action">Quantified Adaptation Targets Class: {{ndc.quantified_adaptation_targets_class}}</li>
+            <li class="list-group-item list-group-item-action">Quantified Adaptation Targets Details: {{ndc.quantified_adaptation_targets_details}}</li>
+            <li class="list-group-item list-group-item-action">Cost of Adaptation Class: {{ndc.costs_of_adaptation_class}}</li>
+            <li class="list-group-item list-group-item-action">Cost of Adaptation Details: {{ndc.costs_of_adaptation_details}}</li>
+            <li class="list-group-item list-group-item-action">Adaptation Documents Class: {{ndc.adaptation_documents_class}}</li>
+            <li class="list-group-item list-group-item-action">Adaptation Documents Details: {{ndc.adaptation_documents_details}}</li>
+            <li class="list-group-item list-group-item-action">Co-Benefits of Adaptation Class: {{ndc.co_benefits_of_adaptation_class}}</li>
+            <li class="list-group-item list-group-item-action">Co-Benefits of Adaptation Details: {{ndc.co_benefits_of_adaptation_details}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#collapseThree">
+          <h4> Finance and Support </h4> <span class="badge badge-primary badge-pill align-items-end">14</span>
+        </a>
+      </div>
+
+
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">Conditionality of Adaptation Finance Class: {{ndc.conditionality_of_adaptation_finance_class}} </li>
+            <li class="list-group-item list-group-item-action">Conditionality of Adaptation Finance Details: {{ndc.conditionality_of_adaptation_finance_details}} </li>
+            <li class="list-group-item list-group-item-action">Conditionality of Mitigation Finance Class: {{ndc.conditionality_of_mitigation_finance_class}} </li>
+            <li class="list-group-item list-group-item-action">Conditionality of Mitigation Finance Details: {{ndc.conditionality_of_mitigation_finance_details}}</li>
+            <li class="list-group-item list-group-item-action">Technoogy Needs Class: {{ndc.technology_needs_class}}</li>
+            <li class="list-group-item list-group-item-action">Technology Needs Details: {{ndc.technology_needs_details}}</li>
+            <li class="list-group-item list-group-item-action">Conditionality of Technology Transfer Class: {{ndc.conditionality_of_technology_transfer_class}}</li>
+            <li class="list-group-item list-group-item-action">Conditionality of Technology Transfer Details: {{ndc.conditionality_of_technology_transfer_details}}</li>
+            <li class="list-group-item list-group-item-action">Conditionality of Capacity Building Class: {{ndc.conditionality_of_capacity_building_class}} </li>
+            <li class="list-group-item list-group-item-action">Conditionality of Capacity Building Details: {{ndc.conditionality_of_capacity_building_details}}</li>
+            <li class="list-group-item list-group-item-action">Means of Implementation and Fairness Class: {{ndc.means_of_implementation_and_fairness_class}}</li>
+            <li class="list-group-item list-group-item-action">Means of Implementation and Fairness Details: {{ndc.means_of_implementation_and_fairness_details}}</li>
+            <li class="list-group-item list-group-item-action">Climate Risk Insurance Class: {{ndc.climate_risk_insurance_class}}</li>
+            <li class="list-group-item list-group-item-action">Climate Risk Insurance Details: {{ndc.climate_risk_insurance_details}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#collapseFour">
+          <h4> Planning Process </h4> <span class="badge badge-primary badge-pill align-items-end">16</span>
+        </a>
+      </div>
+
+
+      <div id="collapseFour" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">Planning of NDC Formulation Class: {{ndc.planning_of_ndc_formulation_class}} </li>
+            <li class="list-group-item list-group-item-action">Planning of NDC Formulation Details: {{ndc.planning_of_ndc_formulation_details}} </li>
+            <li class="list-group-item list-group-item-action">Stakeholder Consultation Class: {{ndc.stakeholder_consultation_class}} </li>
+            <li class="list-group-item list-group-item-action">Stakeholder Consultation Details: {{ndc.stakeholder_consultation_details}}</li>
+            <li class="list-group-item list-group-item-action">Education Planning Class: {{ndc.education_class}}</li>
+            <li class="list-group-item list-group-item-action">Education Planning Details: {{ndc.education_details}}</li>
+            <li class="list-group-item list-group-item-action">Awareness Raising Class: {{ndc.aw_rais_class}}</li>
+            <li class="list-group-item list-group-item-action">Awareness Raising Details: {{ndc.aw_rais_details}}</li>
+            <li class="list-group-item list-group-item-action">Training Class: {{ndc.training_class}}</li>
+            <li class="list-group-item list-group-item-action">Training Details: {{ndc.training_details}}</li>
+            <li class="list-group-item list-group-item-action">Access to Information Class: {{ndc.info_access_class}}</li>
+            <li class="list-group-item list-group-item-action">Access to Information Details: {{ndc.info_access_details}}</li>
+            <li class="list-group-item list-group-item-action">Planning of (I)NDC Implementation Class: {{ndc.planning_of_ndc_implementation_class}}</li>
+            <li class="list-group-item list-group-item-action">Planning of (I)NDC Implementation Details: {{ndc.planning_of_ndc_implementation_details}}</li>
+            <li class="list-group-item list-group-item-action">Monitoring and Review Class: {{ndc.monitoring_and_review_class}}</li>
+            <li class="list-group-item list-group-item-action">Monitoring and Review Details: {{ndc.monitoring_and_review_details}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#collapseFive">
+          <h4> Broader Picture </h4> <span class="badge badge-primary badge-pill align-items-end">26</span>
+        </a>
+      </div>
+
+
+      <div id="collapseFive" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item list-group-item-action">Sustainable Development Goals Class: {{ndc.sustainable_development_goals_class}} </li>
+            <li class="list-group-item list-group-item-action">Sustainable Development Goals Details: {{ndc.sustainable_development_goals_details}} </li>
+            <li class="list-group-item list-group-item-action">Sustainable Development Class: {{ndc.sustainable_development_class}} </li>
+            <li class="list-group-item list-group-item-action">Sustainable Development Details: {{ndc.sustainable_development_details}}</li>
+            <li class="list-group-item list-group-item-action">Fossil Fuel Subsidy Reform Class: {{ndc.fossil_fuel_subsidy_reform_class}}</li>
+            <li class="list-group-item list-group-item-action">Fossil Fuel Subsidy Reform Details: {{ndc.fossil_fuel_subsidy_reform_details}}</li>
+            <li class="list-group-item list-group-item-action">Green Economy Class: {{ndc.green_economy_class}}</li>
+            <li class="list-group-item list-group-item-action">Green Economy Details: {{ndc.green_economy_details}}</li>
+            <li class="list-group-item list-group-item-action">Disaster Risk Reduction Class: {{ndc.disaster_risk_reduction_class}}</li>
+            <li class="list-group-item list-group-item-action">Disaster Risk Reduction Details: {{ndc.disaster_risk_reduction_details}}</li>
+            <li class="list-group-item list-group-item-action">Section on Fairness Class: {{ndc.section_on_fairness_class}}</li>
+            <li class="list-group-item list-group-item-action">Section on Fairness Details: {{ndc.section_on_fairness_details}}</li>
+            <li class="list-group-item list-group-item-action">Historical Responsibility Class: {{ndc.historical_responsibility_class}}</li>
+            <li class="list-group-item list-group-item-action">Historical Responsibility Details: {{ndc.historical_responsibility_details}}</li>
+            <li class="list-group-item list-group-item-action">Loss and Damage Class: {{ndc.loss_and_damage_class}}</li>
+            <li class="list-group-item list-group-item-action">Loss and Damage Details: {{ndc.loss_and_damage_details}}</li>
+            <li class="list-group-item list-group-item-action">Gender Class: {{ndc.gender_class}}</li>
+            <li class="list-group-item list-group-item-action">Gender Details: {{ndc.gender_details}}</li>
+            <li class="list-group-item list-group-item-action">Human Rights Class: {{ndc.human_rights_class}}</li>
+            <li class="list-group-item list-group-item-action">Human Rights Details: {{ndc.human_rights_details}}</li>
+            <li class="list-group-item list-group-item-action">Income Class: {{ndc.income_class}}</li>
+            <li class="list-group-item list-group-item-action">Income Details: {{ndc.income_details}}</li>
+            <li class="list-group-item list-group-item-action">Region ID: {{ndc.region_id}}</li>
+            <li class="list-group-item list-group-item-action">Region Name: {{ndc.region_name}}</li>
+            <li class="list-group-item list-group-item-action">G20 Class: {{ndc.g20_class}}</li>
+            <li class="list-group-item list-group-item-action">G20 Details: {{ndc.g20_details}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+
+{% endblock content %}
