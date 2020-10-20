@@ -18,7 +18,7 @@ class home_page_view(TemplateView):
 
 class NDCListView(ListView):
     model = NDC
-    template_name = 'NDC_list.html'
+    template_name = 'pages/NDC_list.html'
 
 class AboutPageView(TemplateView):
     template_name = 'about.html'
