@@ -6,30 +6,23 @@
 
 {% for ndc in ndc_list %}
 
-<div class="card post border border-secondary  mb-4">
+<br>
+<div class="card border border-secondary mb-3">
 
-  <div class="card-header border-bottom border-secondary bg-dark text-white">
-      <h4>Country: {{ ndc.country }}</h4>
+  <div class="card-header">
+    <a class="card-link d-flex justify-content-between align-items-center" data-toggle="collapse" href="#collapseOne">
+      <h4>Country: {{ ndc.country }}</h4> <span class="badge badge-primary badge-pill align-items-end">Submission Date: {{ ndc.Submission_date|date:'D, d M Y'}}</span>
+    </a>
   </div>
-
-    <div class="card-text bg-secondary pt-2 text-light">
-
-        <p class= "pl-2"><strong>Overview:</strong> The NDC for {{ ndc.country_code }} is a <strong><u>{{ndc.type_of_target_details}}</u></strong>  that includes <strong><u>{{ndc.quantified_adaptation_targets_details}}</u></strong> and is estimated to cost in the range of <strong><u>{{ndc.costs_of_ccm_details}}</u></strong>.</p>
-
-    </div>
-
-    <div class="card-text bg-secondary pl-2 pb-2 text-light">
-      <a class="more-link btn btn-dark border border-secondary bg-secondary text-light" href="{{ ndc.get_absolute_url }}">More Details »</a>
-    </div>
-
-  <div class=" card-footer footer-dark border-top border-dark bg-dark p-1">
-
-    <a class="text-light pl-2"> Submitted By: <a class='text-primary'>{{ ndc.author }}</a></a>
-    <a class="text-light pl-2"> Submission Date: {{ ndc.Submission_date|date:'D, d M Y'}}</a>
-
-
+  <div class='card-text pl-2 p-2'>
+    <p class= "pl-2"><strong>Overview:</strong> The NDC for {{ ndc.country_code }} is a <strong><u>{{ndc.type_of_target_details}}</u></strong>  that includes <strong><u>{{ndc.quantified_adaptation_targets_details}}</u></strong> and is estimated to cost in the range of <strong><u>{{ndc.costs_of_ccm_details}}</u></strong>.</p>
+  </div>
+  <div class='card-text pl-2 pb-2'>
+    <a class="more-link btn" href="{{ ndc.get_absolute_url }}">More Details »</a>
   </div>
 
 </div>
+
+
 {% endfor %}
 {% endblock content %}
