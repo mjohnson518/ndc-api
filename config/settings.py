@@ -115,9 +115,9 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #    }
 #}
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL",
-    default="postgres://postgres@db/postgres")
-}
+         "default": env.dj_db_url("DATABASE_URL",
+     default="postgres://postgres@db/postgres")
+ }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
