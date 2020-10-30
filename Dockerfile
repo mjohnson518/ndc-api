@@ -14,3 +14,6 @@ RUN pip install pipenv && pipenv install --system
 
 # Copy project
 COPY . /code/
+
+# Port
+EXPOSE 8000
