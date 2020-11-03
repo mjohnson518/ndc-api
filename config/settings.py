@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+import dj_database_url
 
 from pathlib import Path
 from environs import Env
@@ -131,6 +132,11 @@ DATABASES = {
         "default": env.dj_db_url("DATABASE_URL",
      default="postgres://postgres@db/postgres")
  }
+
+# DATABASES = {
+#     'default': dj_database_url.config(env("DATABASE_URL"), default="postgres://postgres@db/postgres", conn_max_age=1800),
+#     'ENGINE': 'django.db.backends.postgresql',
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
