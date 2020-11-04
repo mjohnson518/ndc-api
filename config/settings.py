@@ -134,7 +134,7 @@ DATABASES = {
  }
 
 # DATABASES = {
-#     'default': dj_database_url.config(env("DATABASE_URL"), default="postgres://postgres@db/postgres", conn_max_age=1800),
+#     'default': dj_database_url.config(env='DATABASE_URL', conn_max_age=1800),
 #     'ENGINE': 'django.db.backends.postgresql',
 # }
 
