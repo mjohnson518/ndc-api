@@ -125,7 +125,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # 'HOST': 'localhost',
 # 'PORT': '5433:5433',
 # }
-
+#DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 DATABASES = {
 
@@ -140,7 +140,8 @@ DATABASES = {
 # }
 
 # Change 'default' database configuration with $DATABASE_URL.
-DATABASES['default'].update(dj_database_url.config(conn_max_age=18000, ssl_require=True))
+DATABASES['default'].update(dj_database_url.config(conn_max_age=600, ssl_require=True))
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
