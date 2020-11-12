@@ -6,6 +6,6 @@ This is a Dockerized Django app, with a PostgreSQL db, that utilizes Heroku for 
 
 I've reviewed multiple [Docker & PostgreSQL tutorials](https://learndjango.com/tutorials/django-docker-and-postgresql-tutorial) and I've posted abt my issues to the [Django Forum](https://groups.google.com/g/django-users/c/0nKJUHuzxGk/m/J1y8VSsgAQAJ), but I have not been able to solve the issue yet. 
 
-From the Django Forum, and the [Heroku DevCenter](https://devcenter.heroku.com/articles/heroku-postgresql), I've gathered that I need to use [dj-database-url](https://pypi.org/project/dj-database-url/), but everytime I set the config vars &/or envrion vars for dj-database-url, I get error messages.
+From the Django Forum, [Heroku Django Templates](https://github.com/heroku/heroku-django-template/blob/master/project_name/settings.py), and the [DevCenter Resources](https://devcenter.heroku.com/articles/heroku-postgresql), I've gathered that I need to use [dj-database-url](https://pypi.org/project/dj-database-url/), but everytime I set the config vars &/or envrion vars for dj-database-url, I get error messages.
 
 How can I solve this pestering issue!?
