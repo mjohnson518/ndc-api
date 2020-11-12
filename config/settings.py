@@ -127,17 +127,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # }
 #DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
-DATABASES = {
-
-        "default": env.dj_db_url("DATABASE_URL",
-     default="postgres://postgres@db/postgres")
- }
 
 # DATABASES = {
 #     'default': dj_database_url.config(conn_max_age=1800),
 #     'ENGINE': 'django.db.backends.postgresql',
 #
 # }
+
+DATABASES = {
+
+        "default": env.dj_db_url("DATABASE_URL",
+     default="postgres://postgres@db/postgres")
+ }
 
 # Change 'default' database configuration with $DATABASE_URL.
 DATABASES['default'].update(dj_database_url.config(conn_max_age=600, ssl_require=True))
