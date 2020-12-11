@@ -23,6 +23,9 @@ class NDCListView(ListView):
 class AboutPageView(TemplateView):
     template_name = 'about.html'
 
+class LicensePageView(TemplateView):
+    template_name = 'pages/data-license.html'
+
 class NDCDetailView(DetailView):
     model = NDC
     template_name = 'pages/NDC_detail.html'

@@ -19,8 +19,8 @@ class_rank = (
 
 class NDC(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    country = models.CharField(max_length=75, default='NA')
-    title = models.CharField(max_length=100)
+    #country = models.CharField(max_length=75, default='NA')
+    title = models.CharField(max_length=100, default='NDC')
     Submission_type = models.CharField(max_length=75, choices=NDC_TYPE, default='base year emissions goal')
     Submission_date = models.DateField(blank=False, default=datetime.date.today)
     Description = models.TextField(max_length=250, blank=False, default='NA')
@@ -28,7 +28,7 @@ class NDC(models.Model):
     ref_num = models.IntegerField(blank=False, default='0')
     slug = models.SlugField(null=False, unique=True, default=uuid.uuid1)
 
-#CC_Mitigation
+    #CC_Mitigation
     country_name = models.CharField(max_length=75, default='NA')
     country_code = models.CharField(max_length=75, default='NA')
 
