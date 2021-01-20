@@ -136,7 +136,7 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'HOST': '127.0.0.1',
-            'PORT': '3306',
+            'PORT': '3308',
             'NAME': 'ndc_data_next',
             'USER': 'cosm0',
             'PASSWORD': 'P#t2cosm007788',
