@@ -25,7 +25,7 @@ class NDC(models.Model):
     Submission_date = models.DateTimeField(blank=False, default=datetime.date.today)
     Description = models.TextField(max_length=250, blank=False, default='NA')
     NDC_Text = models.FileField(upload_to='static/', max_length=254, default='NA')
-    IPFS_CID = models.CharField(max_length=100, default='IPFS CID')
+    IPFS_CID = models.CharField(max_length=100, default='ipfs.io/')
     ref_num = models.IntegerField(blank=False, default='0')
     slug = models.SlugField(null=False, unique=True, default=uuid.uuid1)
 

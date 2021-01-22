@@ -30,9 +30,15 @@ body {
       </div>
 
       <div class="card-body">
-        <blockquote class="blockquote mb-0">
-          <p>This is where the RSS Feed will go</p>
-        </blockquote>
+
+        <ul>
+          {% for title in feedreader_feed %}
+            <li><a href="{{feedreader_feed.link}}">{{feedreader_feed.title}}</a></li>
+
+          {% endfor %}
+        </ul>
+
+
       </div>
 
       <div class="card-footer">

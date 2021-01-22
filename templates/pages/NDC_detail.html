@@ -2,8 +2,10 @@
 {% block content %}
 
 <div class="container">
-  <h3 class = 'text-primary'><b> Country: {{ ndc.country_name }}</b></h3>
+  <h3 class ='text-primary'><b> Country: {{ ndc.country_name }}</b></h3>
   <p><strong>Overview:</strong> The NDC for {{ ndc.country_code }} is a <strong>{{ndc.type_of_target_details}}</strong> commitment that includes <strong>{{ndc.quantified_adaptation_targets_details}}</strong> and is estimated to cost in the range of <strong>{{ndc.costs_of_ccm_details}}</strong>.</p>
+  <p><strong>NDC Document:</strong> <a href="ipfs://{{ ndc.IPFS_CID }}" target="_blank">{{ ndc.IPFS_CID }}</a></p>
+
   <div id="accordion">
     <div class="card">
       <div class="card-header">
