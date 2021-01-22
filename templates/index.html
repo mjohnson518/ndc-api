@@ -14,10 +14,47 @@ body {
 }
 </style>
 
-<div>
+<div class="pb-4 mb-4">
   <h2 class= 'text-light centercstage'> Welcome to the NDC Portal </h2>
 
-  <h5 class= 'text-light centercstage'><i> The gateway for information on Nationally Determined Contributions</i> </h5>
+  <h4 class= 'text-light centercstage'><i> The gateway of information on Nationally Determined Contributions</i> </h4>
+</div>
+
+<div class="row pt-4">
+
+  <div class="col-md-8">
+    <div class="card special border border-secondary mb-2">
+
+      <div class="card-header">
+          <h5 class= 'text-dark centercstage'> Updated NDC's: </h5>
+      </div>
+
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>This is where the RSS Feed will go</p>
+        </blockquote>
+      </div>
+
+      <div class="card-footer">
+        <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+                <a class="nav-link active" href="{% url 'NDC_list' %}">NDC List</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'schema-swagger-ui' %}">API</a>
+            </li>
+          </ul>
+        </div>
+
+    </div>
+  </div>
+
+  <div class="col-md-4">
+  </div>
+
 </div>
 
 {% endblock content %}
