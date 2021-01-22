@@ -29,11 +29,11 @@ body {
           <h5 class= 'text-dark centercstage'> Updated NDC's: </h5>
       </div>
 
-      <div class="card-body">
+      <div class="card-body text-dark">
 
         <ul>
-          {% for title in feedreader_feed %}
-            <li><a href="{{feedreader_feed.link}}">{{feedreader_feed.title}}</a></li>
+          {% for feedreader_entry.title in feedreader_entry %}
+            <li><a href="{{feedreader_entry.link}}">{{feedreader_feed.title}}</a></li>
 
           {% endfor %}
         </ul>
