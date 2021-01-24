@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'crispy_forms',
-    'feedreader',
+    #'feedreader',
 
     #Local
     'pages',
