@@ -29,6 +29,7 @@ background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=047B
 
 .special {
   background-color: #E5F6FF;
-  opacity: 0.85;
+  opacity: 0.5;
   border-left: 5px solid blue;
+  text-align: center;
 }
