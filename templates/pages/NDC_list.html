@@ -13,7 +13,7 @@
     <a class="card-text text-primary d-flex justify-content-between align-items-center"
         href="{{ ndc.get_absolute_url }}">
       <h4>Country: {{ ndc.country_name }}</h4>
-      <span class="m-4 badge badge-primary badge-pill align-items-end">Submission Date: {{ ndc.Submission_date|date:'D, d M Y'}}</span>
+      <span class="badge badge-primary badge-pill align-items-end">Submission Date:<br> {{ ndc.Submission_date|date:'D, d M Y'}}</span>
     </a>
   </div>
   <div class='card-text pl-2 p-2'>
