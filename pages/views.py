@@ -31,6 +31,7 @@ class NDCDetailView(DetailView):
     model = NDC
     template_name = 'pages/NDC_detail.html'
 
+"""
 class FileDownloadView(View):
     # Set FILE_STORAGE_PATH value in settings.py
     folder_path = settings.MEDIA_ROOT
@@ -52,3 +53,4 @@ class FileDownloadView(View):
             return response
         else:
             raise Http404
+"""
