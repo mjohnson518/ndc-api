@@ -22,34 +22,29 @@ body {
 
 
 <!--<div class="row pt-4">
-  <div class="col-md-9">
-    <div class="card special">
-      <h2 class= 'text-dark centercstage p-2'> Welcome to the NDC Portal </h2>
+  <div class="col-md-8">
+    <div class="card card-header border special border-secondary">
+      <h3 class= 'text-dark centercstage'> Welcome to the NDC Portal </h3>
 
-      <h4 class= 'text-secondary centercstage p-2'><i> The gateway for information on Nationally Determined Contributions</i> </h4>
+      <h5 class= 'text-secondary centercstage'><i> The gateway for information on Nationally Determined Contributions</i> </h5>
     </div>
   </div>
 </div>
+<br><br><br>
 
 <div class="row pt-4">
-
   <div class="col-md-8">
     <div class="card special border border-secondary mb-2">
-
       <div class="card-header">
           <h5 class= 'text-dark centercstage'> Updated NDC's: </h5>
       </div>
 
       <div class="card-body text-dark">
-
         <ul>
           {% for entries in feedreader_feed %}
             <li><a href="{{feedreader_entry.link}}">{{feedreader_entry.title}}</a></li>
-
           {% endfor %}
         </ul>
-
-
       </div>
 
       <div class="card-footer">
@@ -63,8 +58,8 @@ body {
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'schema-swagger-ui' %}">API</a>
             </li>
-          </ul>
-        </div>
+        </ul>
+      </div>
 
     </div>
   </div>
