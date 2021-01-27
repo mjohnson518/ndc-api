@@ -10,4 +10,8 @@
     {{ form|crispy }}
     <button class="btn btn-success" type="submit">Log In</button>
   </form>
+<br>
+<div>
+  <p> If you do not have an account already, you can <a class="text-primary" href="{% url 'account_signup' %}">sign-up here</a>.</p>
+</div>
 {% endblock content %}
