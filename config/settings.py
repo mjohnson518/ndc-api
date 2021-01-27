@@ -182,7 +182,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = 'https://console.cloud.google.com/storage/browser/pages_ndc/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = (str(BASE_DIR.joinpath('static')),)
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_FINDERS = [
@@ -193,7 +193,7 @@ STATICFILES_FINDERS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
-MEDIA_URL = 'https://console.cloud.google.com/storage/browser/pages_ndc/media/'
+MEDIA_URL = 'https://storage.googleapis.com/ndc-app-1234.appspot.com/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
