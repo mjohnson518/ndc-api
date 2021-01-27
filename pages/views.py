@@ -30,27 +30,3 @@ class LicensePageView(TemplateView):
 class NDCDetailView(DetailView):
     model = NDC
     template_name = 'pages/NDC_detail.html'
-
-"""
-class FileDownloadView(View):
-    # Set FILE_STORAGE_PATH value in settings.py
-    folder_path = settings.MEDIA_ROOT
-    # Here set the name of the file with extension
-    file_name = "{{ ndc.NDC_Text }}"
-    # Set the content type value
-    content_type_value = 'PDF'
-
-    def get(self, request, file_name):
-        self.file_name = file_name
-        file_path = os.path.join(self.folder_path, self.file_name)
-        if os.path.exists(file_path):
-            with open(file_path, 'rb') as fh:
-                response = HttpResponse(
-                    fh.read(),
-                    content_type=self.content_type_value
-                )
-                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(file_path)
-            return response
-        else:
-            raise Http404
-"""

@@ -10,7 +10,6 @@ urlpatterns = [
     path('about/', AboutPageView.as_view(), name='about'),
     path('signup/', SignupPageView.as_view(), name='signup'),
     path('data-license/', LicensePageView.as_view(), name='license'),
-    #path('media/', FileDownloadView.as_view(), name='download'),
     #path('feedreader/', include('feedreader.urls'), name='feedreader'),
 
 ]
