@@ -21,7 +21,7 @@ To run the local development server run the following script on the command line
 
 ### TODO
 
-- [ ] Incorporate [UNFCCC RSS Feed](https://www4.unfccc.int/sites/ndcstaging/_layouts/listfeed.aspx?List=%7B40BF57D3%2DBAD2%2D458C%2D8D23%2DBCAEB298A84B%7D) on Landing Page
+- [ ] Incorporate [UNFCCC RSS Feed](https://www4.unfccc.int/sites/ndcstaging/_layouts/listfeed.aspx?List=%7B40BF57D3%2DBAD2%2D458C%2D8D23%2DBCAEB298A84B%7D) on Landing Page. Potentially use [Django-feed-reader](https://pypi.org/project/django-feed-reader/)
 
 - [ ] Update Front-End to incorporate National Flags
 
