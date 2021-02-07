@@ -17,3 +17,18 @@ To run the local development server run the following script on the command line
 ```sh
 ./bin/run.dev.sh
 ```
+
+
+### TODO
+
+- [ ] Incorporate [UNFCCC RSS Feed](https://www4.unfccc.int/sites/ndcstaging/_layouts/listfeed.aspx?List=%7B40BF57D3%2DBAD2%2D458C%2D8D23%2DBCAEB298A84B%7D) on Landing Page
+
+- [ ] Update Front-End to incorporate National Flags
+
+- [ ] Add updated NDC's and side-by-side 'comparison' views. I envision this being similar to Github's file change split view
+
+- [ ] Split Front-End & Back-End and rebuild Front-End w/ Vue
+
+- [ ] Update API to enable users to get/query individual metrics
+
+- [ ] Develop subscription model & SaaS model attributes
