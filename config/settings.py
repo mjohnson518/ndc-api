@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'corsheaders',
     'crispy_forms',
-    #'feedreader',
+    'feeds',
 
     #Local
     'pages',
@@ -229,3 +229,9 @@ SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 SESSION_COOKIE_SECURE = env.bool("DJANGO_SESSION_COOKIE_SECURE", default=True)
 CSRF_COOKIE_SECURE = env.bool("DJANGO_CSRF_COOKIE_SECURE", default=True)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+#Django-Feed-Reader Criteria
+
+FEEDS_USER_AGENT='NDC_API/Feedreader/1.0'
+FEEDS_SERVER="https://ndcportal.app"
