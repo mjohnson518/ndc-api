@@ -20,6 +20,23 @@ body {
   <h4 class= 'text-light centercstage'><i> The gateway for information on Nationally Determined Contributions</i> </h4>
 </div>
 
+{% for post in post_list %}
+<div class="feed-post">
+  <strong>
+    {{ post.title }}
+  </strong>
+  <p>
+    {{ post.author }}
+  </p>
+  <p>
+    {{ post.body|safe }}
+  </p>
+  <p>
+    <a target="_blank" href="{{ post.link }}">Source</a>
+  </p>
+</div>
+{% endfor %}
+
 
 <!--<div class="row pt-4">
   <div class="col-md-8">
