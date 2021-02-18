@@ -6,6 +6,7 @@ from django.urls import reverse_lazy
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.conf import settings
+from feeds.models import Source, Post
 
 
 
@@ -14,7 +15,8 @@ class SignupPageView(generic.CreateView):
     success_url = reverse_lazy('login')
     template_name = 'account/signup.html'
 
-class home_page_view(TemplateView):
+class home_page_view(ListView):
+    model = Post
     template_name = 'index.html'
 
 class NDCListView(ListView):

@@ -36,8 +36,7 @@ background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=047B
 
 .feed-post {
   background: #FFF;
-  border-radius: 1rem;
   margin-bottom: 2rem;
-  max-width: 30rem;
+  max-width: 20rem;
   padding: 1rem;
 }
