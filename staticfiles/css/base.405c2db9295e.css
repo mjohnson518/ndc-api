@@ -39,5 +39,6 @@ background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=047B
   margin-bottom: 2rem;
   max-width: 30rem;
   padding: 1rem;
+  display: flex;
   align-items: center;
 }

@@ -28,16 +28,16 @@ background-image: url('https://mdbootstrap.com/img/svg/hamburger3.svg?color=047B
 
 
 .special {
-  background-color: #E5F6FF;
-  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.75);
   border-radius: 15px;
   text-align: center;
 }
 
 .feed-post {
-  background: #FFF;
+  background: rgba(255, 255, 255, 1);
   border-radius: 1rem;
   margin-bottom: 2rem;
   max-width: 30rem;
   padding: 1rem;
+  align-items: center;
 }
